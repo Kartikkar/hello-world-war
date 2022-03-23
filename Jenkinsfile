@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'java' }
+    agent any
     stages {
         stage('checkout') { 
             steps {
@@ -10,6 +10,6 @@ stage('build') {
             steps {
               sh "mvn clean package"
             }
-        }        
+        } 
     }
 }
