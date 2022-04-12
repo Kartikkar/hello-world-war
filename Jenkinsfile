@@ -26,7 +26,7 @@ pipeline{
                   steps{
                         sh "docker login -u kartdock -p Kar@11118"
                         sh "docker pull kartdock/docimage:1.0"
-                        //sh "docker rm -f trail1"
+                        sh "docker rm -f trail1"
                         sh "docker run -d -p 8090:8080 --name trail1 kartdock/docimage:1.0"
                   }
             }
